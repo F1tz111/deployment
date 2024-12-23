@@ -1,10 +1,19 @@
 Rails.application.routes.draw do
-  root "pages#main"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  
+    # Route for form submission
+    post 'pages/save_form_data', to: 'pages#save_form_data', as: 'save_form_data'
+    
+    get 'pages/success', to: 'pages#success', as: 'success'
+  # Main page route (GET request)
+  root to: 'pages#main'
 
+    get "up" => "rails/health#show", as: :rails_health_check
+  end
+  
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
-  get "up" => "rails/health#show", as: :rails_health_check
+ 
 
   # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
@@ -12,4 +21,3 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-end
