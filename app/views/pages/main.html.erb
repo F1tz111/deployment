@@ -8,37 +8,18 @@
 <div class="pix_section pix_nav_menu pix_scroll_header normal pix-over-header pix-padding-v-30" data-scroll-bg="#282828">
   <div class="container">
    <div class="row">
-    <div class="col-md-10 col-xs-12 pix-inner-col col-sm-10 column ui-droppable">
+    <div class="pix-inner-col col-sm-10 column ui-droppable">
      <div class="pix-content">
-      <nav class="navbar navbar-default pix-no-margin-bottom pix-navbar-default">
+      <nav class=" pix-no-margin-bottom pix-navbar-default">
        <div class="container-fluid">
         <div class="navbar-header">
-         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#pix-navbar-collapse" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-         </button>
          <a class="navbar-brand logo-img logo-img-a pix-adjust-height" href="#"><%= image_tag('') %></a>
         </div>
-        <div class="collapse navbar-collapse" id="pix-navbar-collapse">
-         <ul class="nav navbar navbar-center media-middle pix-header-nav pix-adjust-height" id="pix-header-nav">
-          <li class="dropdown"><a href="#" class="pix-white">PACKAGES</a>
-          </li>
-          <li class="dropdown">
-           <a href="#" class=" pix-white" data-toggle="">
-            PRICING
-           </a>
-           <ul class="dropdown-menu dropdown-menu-left">
-            <li><a href="#" class="null" data-toggle="null">Menu Builder</a>
-            </li>
-            <li><a href="#" class="null" data-toggle="null">Custom Link</a>
-            </li>
-            <li><a href="#" class="null" data-toggle="null">Integrations</a>
-            </li>
-           </ul>
-          </li>
-          <li class="dropdown"><a href="#" class="pix-white"  data-toggle="modal" data-target="#popup_20">CONTACT</a></li>
+        <div class="" id="">
+         <ul class="nav navbar navbar-right media-middle pix-header-nav pix-adjust-height" id="pix-header-nav">
+          <li><%= link_to "PACKAGES", "#pack", class: "pix-white" ,data: {controller: "scroll-to"} %></li>
+           <li><%= link_to "FAQ", "#faq", class: "pix-white" ,data: {controller: "scroll-to"} %></li>
+           <li><%= link_to "CONTACT", "#contact", class: "pix-white" ,data: {controller: "scroll-to"} %></li>
          </ul>
         </div>
        </div>
@@ -47,7 +28,6 @@
     </div>
     <div class="col-md-2 col-xs-12 pix-inner-col col-sm-2 column ui-droppable">
      <div class="pix-content pix-adjust-height text-right">
-
       <div class="pix-header-item">
        <a href="#" class="small-social">
         <i class="bi bi-facebook pix-white"></i>
@@ -75,14 +55,14 @@
       </h2>
       <div class="pix-margin-bottom-15"><h5><span class="pix_edit_text"><span class="label label-default gray-dark-bg"><strong>MVP Service</strong></span></span></h5>
       </div>
-      <div class="pix-padding-bottom-10"><h6 class="pix-gray pix-small-width-text">
+      <div class="pix-padding-bottom-10">
+      <h6 class="pix-gray pix-small-width-text">
        <span class="pix_edit_text">From logo design to website designs. Our developers are ready to complete jobs to save your money and time.</span>
-      </h6></div>
-      <a href="#" class="btn orange-bg small-text btn-round-lg btn-lg pix-white secondary-font pix-margin-right-10 wide pix-margin-top-10" data-toggle="modal" data-target="#popup_20">
+      </h6>
+      </div>
        <span class="pix_edit_text">
-        <strong>Start Now</strong>
+       <strong><%= link_to "Start Now", "#pack", class: "btn orange-bg small-text btn-round-lg btn-lg pix-white secondary-font pix-margin-right-10 wide pix-margin-top-10" ,data: {controller: "scroll-to"} %></strong>
        </span>
-      </a>
      </div>
     </div>
     <div class="col-md-8 col-xs-12">
@@ -240,7 +220,7 @@
 
 
 
- <div class="pix_section pix-padding-v-85 ">
+ <div class="pix_section pix-padding-v-85 " id="pack">
   <div class="container">
    <div class="row">
     <div class="col-md-12 col-xs-12">
@@ -380,11 +360,9 @@
        </div>
        <div class="media-right media-middle text-center media-box-area">
         <div class="pix-inner">
-         <a href="" class="btn btn-md btn-round-lg orange-bg pix-white pix-margin-bottom-10 pix-margin-right-10 wide pix-margin-top-10 secondary-font" data-toggle="modal" data-target="">
           <span class="pix_edit_text">
-           <strong>SEND US A MESSAGE</strong>
+           <%= link_to "SEND US A MESSAGE", "#form", class: "btn btn-md btn-round-lg orange-bg pix-white pix-margin-bottom-10 pix-margin-right-10 wide pix-margin-top-10 secondary-font" ,data: {controller: "scroll-to"} %>
           </span>
-         </a>
         </div>
        </div>
       </div>
@@ -395,7 +373,7 @@
  </div>
 
 
-<div class="pix_section pix_nav_menu pix-padding-v-85 light-black-bg ">
+<div class="pix_section pix_nav_menu pix-padding-v-85 light-black-bg " id="form">
  <div class="text-center">
   <h2 class="pix-white secondary-font pix-small-width-text">
     <span class="pix_edit_text">Write your Mind</span>
@@ -423,13 +401,25 @@
     <div class="col">
       <%= form.label :service, 'Service', class: 'pix-white' %>
       <br>
-      <%= form.select :service, ['MVP', 'Resource'], prompt: 'Please select a Service', class: 'form-control top', disabled: '' %>
-    </div>
+    <%= form.select :service, 
+                [['Please select a Service', '', { disabled: true, selected: true }], 
+                 'MVP', 
+                 'Resource'], 
+                {}, 
+                class: 'form-control top' %>
+
+     </div>
     
     <div class="col">
       <%= form.label :plan, 'Plan', class: 'pix-white' %>
       <br>
-      <%= form.select :plan, ['Personal', 'Startup', 'Business'], prompt: 'Please select a Plan', class: 'form-control top' ,disabled: '' %>
+     <%= form.select :plan, 
+                [['Please select a Plan', '', { disabled: true, selected: true }], 
+                 'Personal', 
+                 'Startup', 
+                 'Business'], 
+                {}, 
+                class: 'form-control top' %>
     </div>
   </div>
   <br>
@@ -623,7 +613,7 @@
    <div class="row">
     <div class="col-md-12 col-xs-12">
      <div class="pix-content text-center">
-      <div>
+      <div id="faq">
        <h2 class="pix-black-gray-dark secondary-font pix-small-width-text">
         <span class="pix_edit_text">Frequently asked questions</span>
        </h2>
