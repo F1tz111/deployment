@@ -4,6 +4,16 @@ import ScrollTo from "stimulus-scroll-to"
 const application = Application.start()
 application.register("scroll-to", ScrollTo)
 
+function toggleCollapsible(button) {
+  alert();
+  button.classList.toggle("active");
+  var content = button.nextElementSibling;
+  if (content.style.display === "block") {
+    content.style.display = "none";
+  } else {
+    content.style.display = "block";
+  }
+}
 
 
 
