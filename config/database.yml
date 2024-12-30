@@ -5,12 +5,12 @@ default: &default
 
 development:
   <<: *default
-  database: <%= ENV.fetch("DATABASE_NAME", "mn_test_development")  %>
+  database: <%= ENV.fetch("DATABASE_NAME", "onepager_development")  %>
 
 test:
   <<: *default
-  database: <%= ENV.fetch("DATABASE_NAME", " mn_test_test")  %>
+  database: <%= ENV.fetch("DATABASE_NAME", " onepager_test")  %>
 
 production:
   <<: *default
-  database: <%= ENV.fetch("DATABASE_NAME", "mn_test_production")  %>
+  database: <%= ENV.fetch("DATABASE_NAME", "onepager_production")  %>
