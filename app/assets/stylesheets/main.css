@@ -16,6 +16,8 @@ html {
     /* set viewport constraint */
     min-height: 100%;
     /* enforce height */
+    scroll-behavior: smooth !important;
+
 }
 
 body {
@@ -38,6 +40,12 @@ html {
     overflow-x: hidden;
     min-height: 100vh;
     overflow: auto;
+    scroll-behavior: smooth !important;
+
+}
+
+* {
+    scroll-behavior: smooth;
 }
 
 .secondary-font {

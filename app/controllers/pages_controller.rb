@@ -12,7 +12,8 @@ class PagesController < ApplicationController
     # Try to save the form data
     if form_data.save
       # Redirect to a success page if the data is saved
-      redirect_to success_path, notice: 'Your form has been submitted successfully!'
+      flash[:notice] = 'Your form has been submitted successfully!'
+      #redirect_to success_path, notice: 'Your form has been submitted successfully!'
     else
       # Render the main page again with an error message if save fails
       render :main, alert: 'There was an error submitting your form. Please try again.'
