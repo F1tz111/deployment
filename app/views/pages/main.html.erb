@@ -15,11 +15,24 @@
         <div class="navbar-header">
          <a class="navbar-brand logo-img logo-img-a pix-adjust-height" href="#"><%= image_tag('') %></a>
         </div>
+<<<<<<< e2ad1d5
+        <div class="collapse navbar-collapse" id="pix-navbar-collapse">
+         <ul class="nav navbar navbar-center media-middle pix-header-nav pix-adjust-height" id="pix-header-nav">
+          <li class="dropdown"><a href="#packages" class="pix-white">PACKAGES</a>
+          </li>
+          <li class="dropdown">
+           <a href="#faq" class=" pix-white" data-toggle="">
+            FAQ
+           </a>
+          </li>
+          <li class="dropdown"><a href="#" class="pix-white"  data-toggle="modal" data-target="#popup_20">CONTACT</a></li>
+=======
         <div class="" id="">
          <ul class="nav navbar navbar-right media-middle pix-header-nav pix-adjust-height" id="pix-header-nav">
           <li><%= link_to "PACKAGES", "#pack", class: "pix-white" ,data: {controller: "scroll-to"} %></li>
            <li><%= link_to "FAQ", "#faq", class: "pix-white" ,data: {controller: "scroll-to"} %></li>
            <li><%= link_to "CONTACT", "#contact", class: "pix-white" ,data: {controller: "scroll-to"} %></li>
+>>>>>>> main
          </ul>
         </div>
        </div>
@@ -224,17 +237,17 @@
   <div class="container">
    <div class="row">
     <div class="col-md-12 col-xs-12">
-     <div class="pix-content text-left pix-padding-bottom-40">
+     <div class="pix-content text-left pix-padding-bottom-40" >
       <div>
        <h2 class="pix- secondary-font pix-small-width-text ">
-        <span class="pix_edit_text ">Start with affordable prices.</span>
+        <span class="pix_edit_text" >Start with affordable prices.</span>
        </h2>
       </div>
       <div>
        <h6 class="pix-gray pix-small-width-text">
        <span class="pix_edit_text">From logo design to website designers and developers are ready to complete jobs to save your money and time.</span>
        </h6>
-       <div class="text-left">
+       <div class="text-left" id="packages">
        <a class="btn orange-bg small-text btn-round-lg btn-lg pix-white secondary-font pix-margin-right-10 wide pix-margin-top-10 btn-mvp" data-toggle="modal" data-target="#popup_20">
        <span class="pix_edit_text btn-mvp">
         <strong>MVP</strong>
@@ -388,7 +401,7 @@
     </div>
     <div class="col">
       <%= form.label :contact, 'Contact', class: 'pix-white' %>
-      <%= form.number_field :contact, class: 'form-control', placeholder: 'Enter your Contact No...' %>
+      <%= form.number_field :contact, class: 'form-control', placeholder: 'Enter your Contact No...', min:0 %>
     </div>
   </div>
   <br>
@@ -615,7 +628,7 @@
      <div class="pix-content text-center">
       <div id="faq">
        <h2 class="pix-black-gray-dark secondary-font pix-small-width-text">
-        <span class="pix_edit_text">Frequently asked questions</span>
+        <span class="pix_edit_text" id="faq">Frequently asked questions</span>
        </h2>
       </div>
       <div>
