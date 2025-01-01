@@ -1,11 +1,30 @@
+import { Application } from "@hotwired/stimulus";
+import ScrollTo from "stimulus-scroll-to"
+
+const application = Application.start()
+application.register("scroll-to", ScrollTo)
+
+function toggleCollapsible(button) {
+  alert();
+  button.classList.toggle("active");
+  var content = button.nextElementSibling;
+  if (content.style.display === "block") {
+    content.style.display = "none";
+  } else {
+    content.style.display = "block";
+  }
+}
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
 
-    const resourceButton = document.querySelector('.btn-resource');
+  const resourceButton = document.querySelector('.btn-resource');
 
-    if (resourceButton) {
-        resourceButton.addEventListener('click', function () {
+  if (resourceButton) {
+    resourceButton.addEventListener('click', function () {
 
-            document.getElementById('resource-personal-plan').innerHTML = `
+      document.getElementById('resource-personal-plan').innerHTML = `
           <div class="pix-content text-center pix_feature_std gray-dark-bg pix_orange_border">
             <h3 class="pix-white secondary-font"><strong>Personal</strong></h3>
             <p class="pix-black-gray-light pix-margin-bottom-10 secondary-font">
@@ -21,8 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
         `;
 
-            // Change content for Startup Plan
-            document.getElementById('resource-startup-plan').innerHTML = `
+      // Change content for Startup Plan
+      document.getElementById('resource-startup-plan').innerHTML = `
           <div class="pix-content text-center pix_feature_std gray-dark-bg pix_orange_border">
             <h3 class="pix-white secondary-font"><strong>Startup</strong></h3>
             <p class="pix-orange pix-margin-bottom-10 secondary-font">
@@ -38,8 +57,8 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
         `;
 
-            // Change content for Business Plan
-            document.getElementById('resource-business-plan').innerHTML = `
+      // Change content for Business Plan
+      document.getElementById('resource-business-plan').innerHTML = `
           <div class="pix-content text-center pix_feature_std gray-dark-bg pix_orange_border">
             <h3 class="pix-white secondary-font"><strong>Business</strong></h3>
             <p class="pix-black-gray-light pix-margin-bottom-10 secondary-font">
@@ -54,16 +73,16 @@ document.addEventListener('DOMContentLoaded', function () {
             </a>
           </div>
         `;
-        });
-    }
+    });
+  }
 
 
-    const mvpButton = document.querySelector('.btn-mvp');
+  const mvpButton = document.querySelector('.btn-mvp');
 
-    if (mvpButton) {
-        mvpButton.addEventListener('click', function () {
+  if (mvpButton) {
+    mvpButton.addEventListener('click', function () {
 
-            document.getElementById('resource-personal-plan').innerHTML = `
+      document.getElementById('resource-personal-plan').innerHTML = `
           <div class="pix-content text-center pix_feature_std gray-dark-bg pix_orange_border">
             <h3 class="pix-white secondary-font"><strong>Personal</strong></h3>
             <p class="pix-black-gray-light pix-margin-bottom-10 secondary-font">
@@ -79,8 +98,8 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
         `;
 
-            // Change content for Startup Plan
-            document.getElementById('resource-startup-plan').innerHTML = `
+      // Change content for Startup Plan
+      document.getElementById('resource-startup-plan').innerHTML = `
           <div class="pix-content text-center pix_feature_std gray-dark-bg pix_orange_border">
             <h3 class="pix-white secondary-font"><strong>Startup</strong></h3>
             <p class="pix-orange pix-margin-bottom-10 secondary-font">
@@ -96,8 +115,8 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
         `;
 
-            // Change content for Business Plan
-            document.getElementById('resource-business-plan').innerHTML = `
+      // Change content for Business Plan
+      document.getElementById('resource-business-plan').innerHTML = `
           <div class="pix-content text-center pix_feature_std gray-dark-bg pix_orange_border">
             <h3 class="pix-white secondary-font"><strong>Business</strong></h3>
             <p class="pix-black-gray-light pix-margin-bottom-10 secondary-font">
@@ -112,8 +131,8 @@ document.addEventListener('DOMContentLoaded', function () {
             </a>
           </div>
         `;
-        });
-    }
+    });
+  }
 
 
 
