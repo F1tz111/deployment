@@ -1,22 +1,3 @@
-import { Application } from "@hotwired/stimulus";
-import ScrollTo from "stimulus-scroll-to"
-
-const application = Application.start()
-application.register("scroll-to", ScrollTo)
-
-function toggleCollapsible(button) {
-  alert();
-  button.classList.toggle("active");
-  var content = button.nextElementSibling;
-  if (content.style.display === "block") {
-    content.style.display = "none";
-  } else {
-    content.style.display = "block";
-  }
-}
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
 
   const resourceButton = document.querySelector('.btn-resource');
@@ -35,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
               3 Landing Pages<br>10,000 Page views<br>Resource Support<br>-<br>-
             </p>
             <a href="#" class="btn btn-md btn-round-lg orange-bg pix-white pix-margin-bottom-10 pix-margin-right-10 wide pix-margin-top-10 secondary-font">
-              <strong>GET STARTED</strong>
+              <strong>Book a Call</strong>
             </a>
           </div>
         `;
@@ -52,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
               10 Landing Pages<br>20,000 Page views<br>Resource Support<br>Priority Support<br>-
             </p>
             <a href="#" class="btn btn-md btn-round-lg orange-bg pix-white pix-margin-bottom-10 pix-margin-right-10 wide pix-margin-top-10 secondary-font">
-              <strong>GET STARTED</strong>
+              <strong>Book a Call</strong>
             </a>
           </div>
         `;
@@ -69,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
               50 Landing Pages<br>100,000 Page views<br>Resource Support<br>Premium Support<br>Free Updates
             </p>
             <a href="#" class="btn btn-md btn-round-lg orange-bg pix-white pix-margin-bottom-10 pix-margin-right-10 wide pix-margin-top-10 secondary-font">
-              <strong>GET STARTED</strong>
+              <strong>Book a Call</strong>
             </a>
           </div>
         `;
@@ -93,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
               3 Landing Pages<br>10,000 Page views<br>Resource Support<br>-<br>-
             </p>
             <a href="#" class="btn btn-md btn-round-lg orange-bg pix-white pix-margin-bottom-10 pix-margin-right-10 wide pix-margin-top-10 secondary-font">
-              <strong>GET STARTED</strong>
+              <strong>Book a Call</strong>
             </a>
           </div>
         `;
@@ -110,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
               10 Landing Pages<br>20,000 Page views<br>Resource Support<br>Priority Support<br>-
             </p>
             <a href="#" class="btn btn-md btn-round-lg orange-bg pix-white pix-margin-bottom-10 pix-margin-right-10 wide pix-margin-top-10 secondary-font">
-              <strong>GET STARTED</strong>
+              <strong>Book a Call</strong>
             </a>
           </div>
         `;
@@ -127,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
               50 Landing Pages<br>100,000 Page views<br>Resource Support<br>Premium Support<br>Free Updates
             </p>
             <a href="#" class="btn btn-md btn-round-lg orange-bg pix-white pix-margin-bottom-10 pix-margin-right-10 wide pix-margin-top-10 secondary-font">
-              <strong>GET STARTED</strong>
+              <strong>Book a Call</strong>
             </a>
           </div>
         `;
